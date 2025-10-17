@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🔥 WALL OF FAME 🔥</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            margin: 0;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .wall-of-fame {
+            background: rgba(0, 0, 0, 0.7);
+            max-width: 500px;
+            width: 100%;
+            padding: 2.5rem 2rem;
+            border-radius: 25px;
+            box-shadow: 0 0 20px #6a11cb, 0 0 40px #2575fc;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 4px;
+            user-select: none;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #8e44ad;
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin: 1rem 0;
+            font-weight: 600;
+            line-height: 1.4;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            text-align: left;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e1dede;
+            margin-bottom: 2rem;
+            list-style-type: circle;
+            line-height: 1.6;
+            text-shadow: none;
+        }
+
+        ul li {
+            margin-bottom: 0.7rem;
+        }
+
+        .payment-btn {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 1rem 3rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(38, 107, 255, 0.8);
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+        }
+
+        .payment-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(38, 107, 255, 1);
+        }
+
+        a.mail-link {
+            color: #aad4ff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        a.mail-link:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 25px #6a11cb, 0 0 50px #2575fc;
+            }
+
+            50% {
+                box-shadow: 0 0 40px #8e44ad, 0 0 75px #3498db;
+            }
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .wall-of-fame {
+                padding: 2rem 1rem;
+                max-width: 100%;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p,
+            ul {
+                font-size: 1rem;
+            }
+
+            .payment-btn {
+                font-size: 1.1rem;
+                padding: 0.9rem 2rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="wall-of-fame">
+        <h1> WALL OF FAME </h1>
+        <p>
+            Want to share a fun message or a photo of your friend or crush? For just ₹10, you can get your shoutout on
+            our Wall of Fame!
+        </p>
+        <p>How to do it:</p>
+        <ul>
+            <li>Make a payment of ₹10.</li>
+            <li>Write your message and the name you want it to show with in the payment description box.</li>
+            <li>
+                If you want to add a photo, email it to
+                <a href="mailto:myvirtualfriend0@gmail.com" class="mail-link">myvirtualfriend0@gmail.com</a>
+                along with your payment screenshot.
+            </li>
+        </ul>
+        <p>We’ll put your message or photo up on the website within 2 hours!</p>
+        <a href="https://pages.razorpay.com/pl_RUT927MZ6TLJdX/view" target="_blank" rel="noopener noreferrer"
+            class="payment-btn">
+            Post a Message on wall of fame
+        </a><br><br>
+        <a href="fame.html" class="payment-btn"
+            style="margin-top: 1rem; background: linear-gradient(45deg, #2575fc, #6a11cb); box-shadow: 0 6px 20px rgba(38, 107, 255, 0.8);">
+            Enter The Wall of Fame
+        </a>
+    </section>
+</body>
+
+</html>

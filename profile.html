@@ -1,0 +1,54 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile – HUSTLE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">HUSTLE</div>
+        <button class="burger" id="burgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="navMenu" class="hidden">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="profile.html">Profile</a>
+            <a href="wall.html">Wall of Fame</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <h1>Your Profile</h1>
+        <form id="profileForm" class="profile-form">
+            <div class="profile-pic-container">
+                <img id="previewPic" src="https://via.placeholder.com/120" alt="Profile Preview" />
+                <input type="file" id="profilePic" accept="image/*" />
+            </div>
+            <div class="coming-soon-overlay">
+                <div class="coming-soon-message">
+                    Coming Soon
+                </div>
+            </div>
+
+            <input type="text" id="profileName" placeholder="Full Name" required />
+            <input type="text" id="collegeName" placeholder="College Name" required />
+            <input type="tel" id="mobileNumber" placeholder="Mobile Number" required />
+            <button type="submit" class="cta-btn">Save Profile</button>
+        </form>
+    </main>
+
+    <footer>
+        © 2025 HUSTLE| Made by the Students of GNI
+    </footer>
+</body>
+
+</html>

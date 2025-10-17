@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wall of Fame</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #111;
+            color: #eee;
+            margin: 0;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 1rem;
+            background: #222;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(97, 91, 255, 0.3);
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #615bff;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+        }
+
+        .wall-entry {
+            background: #333;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: inset 0 0 10px rgba(97, 91, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideIn 0.5s forwards;
+        }
+
+        .entry-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #ddd;
+            white-space: pre-wrap;
+        }
+
+        .entry-image {
+            max-width: 100%;
+            max-height: 250px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(97, 91, 255, 0.5);
+        }
+
+        .entry-meta {
+            font-size: 0.85rem;
+            color: #999;
+            text-align: right;
+        }
+
+        @keyframes fadeSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container" id="wallContainer">
+        <h1> Wall of Fame </h1>
+        <!-- Wall entries will be manually added here -->
+    </main>
+
+    <script>
+        // Example of how you can dynamically add entries; replace with your manual content
+        const wallEntries = [
+            {
+                text: "ALL THE MESSAGES IN THE WALL OF FAME ARE COMPLETELY ANONYMOUS, YOUR IDENTITY WILL NEVER BE REVEALED, KEEP SUPPORTING US",
+                image: "hack.jpeg",
+                author: "ADMIN"
+            },
+            {
+                text: "I Like a Girl From My Bus. Bus No-F8.",
+                image: "",
+                author: "Just a Student from GNU"
+            },
+            {
+                text: "Back Workout Going Crazy!! Avunu Show minguthunna!!",
+                image: "gym.JPG",
+                author: "PartyAnimal42"
+            },
+            {
+                text: "You're Soo Damnn Cute When You Are Sleeping in the Bus!!.",
+                image: "",
+                author: "Snigdha"
+            },
+            {
+                text: "Happy Birthday Keerthan Mamaaaa..",
+                image: "kirthan.JPG",
+                author: "Salaar Varada"
+            },
+        ];
+
+        const container = document.getElementById('wallContainer');
+
+        function addEntry(entry) {
+            const entryEl = document.createElement('section');
+            entryEl.className = 'wall-entry';
+
+            const textEl = document.createElement('div');
+            textEl.className = 'entry-text';
+            textEl.textContent = entry.text;
+            entryEl.appendChild(textEl);
+
+            if (entry.image) {
+                const imgEl = document.createElement('img');
+                imgEl.className = 'entry-image';
+                imgEl.src = entry.image;
+                imgEl.alt = "Wall of Fame entry image";
+                entryEl.appendChild(imgEl);
+            }
+
+            const metaEl = document.createElement('div');
+            metaEl.className = 'entry-meta';
+            metaEl.textContent = `Posted by: ${entry.author}`;
+            entryEl.appendChild(metaEl);
+
+            container.appendChild(entryEl);
+        }
+
+        // Add predefined entries or manually update this array with paid submissions
+        wallEntries.forEach(addEntry);
+
+        // For real deployment, you can append entries manually or via server side.
+    </script>
+</body>
+
+</html>

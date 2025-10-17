@@ -1,0 +1,113 @@
+<!-- opportunities.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opportunities – HUSTLE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">HUSTLE</div>
+        <button class="burger" id="burgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="navMenu" class="hidden">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="profile.html">Profile</a>
+            <a href="wall.html">Wall of Fame</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+    </header>
+
+    <main class="opportunities-page">
+        <h1>‎ ‎ Explore All Opportunities</h1>
+
+        <!-- Replace your current #opportunitiesGrid block with this -->
+        <div id="opportunitiesGrid" class="event-list modern-list">
+
+            <a href="event1.html" style="text-decoration:none; color:inherit;">
+                <div class="event-item">
+                    <div class="event-top">
+                        <img src="gni1.jpg" alt="Event Logo" class="event-icon">
+                        <div class="event-info">
+                            <h3>Multiple Corporate Tools in Cyber Security & Google Hacks</h3>
+                            <p class="organizer">Guru Nanak Institutions</p>
+                        </div>
+                    </div>
+                    <div class="event-middle">
+                        <div class="left-info">
+                            <span class="money">🏆 Internship</span>
+                            <span class="stat">👁 1018 Impressions</span>
+                        </div>
+                        <div class="right-info">
+                            <span class="days-left">🕒 5 days left</span>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="tag">Coding Challenge</span>
+                        <span class="tag">Cyber Security</span>
+                        <span class="tag">+10</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+
+
+
+        </div>
+    </main>
+
+    <div id="eventDetailModal" class="modal hidden">
+        <div class="modal-content detail-modal">
+            <span class="close" id="modalCloseBtn">&times;</span>
+            <div class="modal-header">
+                <img id="modalLogo" src="" alt="Event Logo" class="modal-logo" />
+                <div>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalOrganizer"></p>
+                </div>
+            </div>
+
+            <div class="modal-stats">
+                <span class="prize" id="modalPrize"></span>
+                <span class="registered" id="modalRegistered"></span>
+                <span class="days-left" id="modalDaysLeft"></span>
+            </div>
+
+            <p id="modalDescription"></p>
+
+            <a href="#" target="_blank" id="modalApplyLink" class="cta-btn">Apply Now</a>
+        </div>
+    </div>
+
+
+    <div id="applyModal" class="modal hidden">
+        <div class="modal-content form-modal">
+            <span class="close" onclick="closeApplyModal()">&times;</span>
+            <h2>Apply Now</h2>
+            <form id="applyForm">
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="text" placeholder="College" required />
+                <input type="text" placeholder="Branch" required />
+                <input type="url" placeholder="GitHub or LinkedIn" required />
+                <button type="submit" class="cta-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 HUSTLE| Made by the Students of GNI
+    </footer>
+</body>
+
+</html>

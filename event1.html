@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multiple Corporate Tools Workshop - HUSTLE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Multiple Corporate Tools in Cyber Security & Google Hacks</h1>
+        <p class="organizer">Guru Nanak Institutions</p>
+    </header>
+
+    <section class="event-banner">
+        <img src="poster1.png" alt="Event Logo" />
+    </section>
+
+    <section class="event-info">
+        <p><strong>Date:</strong> 22nd – 23rd October</p>
+        <p><strong>Venue:</strong> Padma Shri Ratan Naval Tata Auditorium, GNIT
+        </p>
+        <p><strong>Time:</strong> 10:00 AM – 4:00 PM</p>
+    </section>
+
+    <section class="registration">
+        <div class="price-container">
+            <p class="registration-price">₹ 150</p>
+        </div>
+        <a href="https://konfhub.com/checkout/hands-on-workshop-corporate-tools-in-cyber-security-google-hacks?"
+            target="_blank" rel="noopener noreferrer" class="register-btn">
+            Register Now
+        </a>
+
+
+    </section>
+
+
+    <section class="event-description">
+        <h2>About this Workshop</h2>
+        <p>✅Physical participation certificates from Supraja Technologies.<br>
+            ✅You will be provided with refreshments.<br>
+            ✅Provides Licence to Tools.<br>
+            ✅Real-World hacking insights.<br>
+            ✅Hands-on training with real and licensed industry tools<br><br>
+
+            <b>📝 Note:
+                Participants are required to bring their own laptops.<b>
+
+        </p>
+    </section>
+
+    <section class="tags">
+        <span class="tag">Coding Challenge</span>
+        <span class="tag">Cyber Security</span>
+        <span class="tag tag-more">+10 More</span><br><br><br>
+    </section>
+
+    <!-- <button id="rzp-button1" class="fixed-cta">Register & Pay ₹500</button> -->
+    <footer>
+        © 2025 HUSTLE| Made by the Students of GNI
+
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            var options = {
+                key: "rzp_live_RUS0oYu7tdCHZV",
+                amount: 50000,
+                currency: "INR",
+                name: "HUSTLE Workshop",
+                description: "Workshop Registration Fee",
+                handler: function (response) {
+                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                    // Add registration success logic here
+                },
+                prefill: { name: "", email: "", contact: "" },
+                theme: { color: "#615bff" }
+            };
+            var rzp = new Razorpay(options);
+            document.getElementById('rzp-button1').onclick = function (e) {
+                e.preventDefault();
+                rzp.open();
+            };
+        </script>
+</body>
+
+</html>
