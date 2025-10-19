@@ -29,18 +29,25 @@
         <h1>Contact Us</h1>
         <p class="subtitle">We’d love to hear from you! Reach out for feedback, partnerships, or queries.</p>
 
-        <form id="contactForm" class="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
-            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit" class="cta-btn">Send Message</button>
+        <form action="https://formspree.io/f/mnngrjrw" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
         </form>
+
 
         <div class="contact-info">
             <h3>Other Ways to Reach Us</h3>
-            <p>Email: support@opportunityhub.in</p>
-            <p>Phone: +91 98765 43210</p>
-            <p>Location: GNI, Hyderabad, India</p>
+            <p>Email: myvirtualfriend0@gmail.com</p>
+            <p>Phone: +91 XXXXXXXXXX</p>
+            <p>Location: India</p>
         </div>
     </main>
 
