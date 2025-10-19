@@ -37,11 +37,17 @@
             <input type="email" id="email" name="_replyto" required />
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" placeholder="Your Message" name="message" rows="5" required></textarea>
 
             <button type="submit">Send</button>
         </form>
 
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
 
         <div class="contact-info">
             <h3>Other Ways to Reach Us</h3>
